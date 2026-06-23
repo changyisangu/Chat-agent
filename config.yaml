@@ -1,4 +1,4 @@
-﻿api_key: "sk-dac7d5318ab8498a9e6d9a9ada84cf00"
+﻿api_key: "sk-xxx"
 base_url: "https://api.deepseek.com/v1"
 model: "deepseek-chat"
 temperature: 0.3
