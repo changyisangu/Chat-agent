@@ -26,7 +26,7 @@ class ChatHistory:
             with open(self.path, "r", encoding="utf-8") as f:
                 self.messages = json.load(f)
             logger.info(f"加载历史 {len(self.messages)} 条消息: {self.path}")
-        except (json.JSONDecodeError, IOError) as e:
+        except (json.JSONDecodeError, OSError) as e: # JSON解码出错 或者 OS底层出错
             logger.warning(f"历史文件加载失败，重置: {e}")
             self.messages = []
 
@@ -36,7 +36,7 @@ class ChatHistory:
             os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
             with open(self.path, "w", encoding="utf-8") as f:
                 json.dump(self.messages, f, ensure_ascii=False, indent=2)
-        except IOError as e:
+        except OSError as e:
             logger.error(f"历史文件保存失败: {e}")
 
     def add(self, role: str, content: str) -> None:

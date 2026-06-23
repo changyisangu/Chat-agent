@@ -32,3 +32,13 @@
 2026-06-22 15:37:34 | INFO    | User: 我刚才第一个问题问的是什么？
 2026-06-22 15:37:34 | INFO    | Assistant: 你刚才的第一个问题是：“hello”，我回复了“Hello! How can I assist you today?”。之后你接着问了我使用的模型、版本以及记忆能力相关的问题。😊
 2026-06-22 15:40:55 | INFO    | ===== 聊天 Agent 退出 =====
+2026-06-22 16:00:04 | INFO    | ===== 聊天 Agent 启动 =====
+2026-06-22 16:00:05 | INFO    | 加载历史 12 条消息: history.json
+2026-06-22 16:00:05 | INFO    | ChatAgent 初始化完成 | model=deepseek-chat
+2026-06-22 16:00:11 | INFO    | User: 你好
+2026-06-22 16:00:11 | INFO    | Assistant: 你好！😊 有什么我可以帮你的吗？
+2026-06-22 17:35:56 | INFO    | ===== 聊天 Agent 退出 =====
+2026-06-23 18:23:27 | INFO    | ===== 聊天 Agent 启动 =====
+2026-06-23 18:23:28 | INFO    | 加载历史 14 条消息: history.json
+2026-06-23 18:23:28 | INFO    | ChatAgent 初始化完成 | model=deepseek-chat
+2026-06-23 18:44:08 | INFO    | ===== 聊天 Agent 退出 =====

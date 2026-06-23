@@ -1,4 +1,5 @@
-﻿import time
+﻿# type: ignore
+import time
 import logging
 from typing import Optional, Dict, Any, List
 from openai import OpenAI, RateLimitError, APIError, APITimeoutError, APIConnectionError
@@ -29,17 +30,19 @@ class ChatAgent:
 
     def chat(self, user_input: str) -> str:
         """处理用户输入，返回助手回复"""
-        # 构建消息列表
-        messages: List[ChatCompletionMessageParam] = [
+        # 人设：也就是 config 里面的 system_prompt
+        messages: List[ChatCompletionMessageParam] = [  # Chat Completion Message Param:聊天 补全 消息 参数
             {"role": "system", "content": self.system_prompt}
         ]
+        # 历史消息
         messages.extend(self.history.get_messages())
+        # 当前问题
         messages.append({"role": "user", "content": user_input})
 
-        # 调用 API（含重试）
+        # 调用 API 传入消息（性格+历史+问题）
         reply: Optional[str] = self._call_api_with_retry(messages)
         if reply is None:
-            return "[错误] 多次重试失败，请检查网络或 API 配置。"
+            return "[ERROR] 多次重试失败，请检查网络或 API 配置。"
 
         # 保存历史
         self.history.add("user", user_input)

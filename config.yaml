@@ -1,4 +1,4 @@
-﻿api_key: "sk-xxx" # 这里需要输入你的 DeepSeek 的 api，请在 DeepSeek 开放平台获取
+﻿api_key: "sk-dac7d5318ab8498a9e6d9a9ada84cf00"
 base_url: "https://api.deepseek.com/v1"
 model: "deepseek-chat"
 temperature: 0.3

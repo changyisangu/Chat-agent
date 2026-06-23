@@ -37,7 +37,9 @@ def main() -> None:
     print("-" * 40)
 
     while True:
+        # 交互式文本一定要多用try...except
         try:
+            # .strip()：把输入内容前后的空格和换行符删掉。防止按了个空格，程序误以为说了话。
             user_input: str = input("\nYou: ").strip()
         except (EOFError, KeyboardInterrupt):
             print("\n再见！")
@@ -45,8 +47,8 @@ def main() -> None:
 
         if not user_input:
             continue
-        if user_input.lower() in ("quit", "exit"):
-            print("再见！")
+        if user_input.lower() in ("quit", "exit"): # .lower()表示输入内容转成小写
+            print("用户退出对话！")
             break
         if user_input.lower() == "clear":
             agent.clear_history()
@@ -60,4 +62,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    
     main()

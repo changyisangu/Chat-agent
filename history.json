@@ -46,5 +46,13 @@
   {
     "role": "assistant",
     "content": "你刚才的第一个问题是：“hello”，我回复了“Hello! How can I assist you today?”。之后你接着问了我使用的模型、版本以及记忆能力相关的问题。😊"
+  },
+  {
+    "role": "user",
+    "content": "你好"
+  },
+  {
+    "role": "assistant",
+    "content": "你好！😊 有什么我可以帮你的吗？"
   }
 ]
