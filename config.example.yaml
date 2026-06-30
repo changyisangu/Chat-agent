@@ -1,0 +1,11 @@
+api_key: "YOUR_DEEPSEEK_API_KEY"
+base_url: "https://api.deepseek.com/v1"
+model: "deepseek-chat"
+temperature: 0.3
+max_tokens: 2048
+max_retries: 3
+retry_base_delay: 1.0
+system_prompt: "你是一个有帮助的助手。每轮对话的历史会自动提供给你，请根据上下文回答问题，如果用户提到之前的对话内容，直接基于历史回答。"
+history_path: "history.json"
+log_path: "logs/chat.log"
+log_level: "INFO"

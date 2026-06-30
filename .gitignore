@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+
+.idea/
+.vscode/
+
+logs/
+*.log
+
+config.yaml
+history.json
+
+.env
+.venv/
+venv/
